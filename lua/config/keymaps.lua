@@ -2,13 +2,8 @@ local function map(m, k, v)
 	vim.keymap.set(m, k, v, { silent = false })
 end
 
-local builtin = require "telescope.builtin"
-
--- Dapui
-map('n', '<leader>da', [[:lua require("dapui").toggle()<CR>]])
-
--- Telescope
-map('n', '<leader>a', builtin.find_files)
+-- Oil
+map('n', '<leader>a', ":Oil<CR>")
 
 -- Tools
 map('n', '<leader>n', ':w<CR>')

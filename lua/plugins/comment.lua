@@ -2,15 +2,15 @@ return {
 	'numToStr/Comment.nvim',
 	opts = {
 		toggler = {
-			line = 'ca',
+			line = '<leader>cc',
 		},
 		extra = {
-			eol = 'ce',
-			above = 'cO',
-			below = 'co'
+			eol = '<leader>ce',
+			above = '<leader>cO',
+			below = '<leader>co'
 		},
 		opleader = {
-			block = 'ca',
+			block = '<leader>cc',
 		}
 	},
 	lazy = false,

@@ -3,26 +3,14 @@ return {
 		"simrat39/rust-tools.nvim",
 		lazy = false,
 		config = function()
-			local mason_registry = require("mason-registry")
-			local codelldb = mason_registry.get_package("codelldb")
-			local extension_path = codelldb:get_install_path() .. "/extension/"
-			local codelldb_path = extension_path .. "adapter/codelldb"
-			local liblldb_path = extension_path .. "lldb\\bin\\liblldb.dll"
-			local adapter = require("rust-tools.dap").get_codelldb_adapter(codelldb_path, liblldb_path)
 			local rt = require("rust-tools")
 			rt.setup({
-				dap = {
-					adapter = adapter
-				},
 				server = {
 					on_attach = function(_, bufnr)
-						-- Open cargo
+						vim.keymap.set("n", "'<", rt.hover_actions.hover_actions, { buffer = bufnr })
 						vim.cmd('abb cargo RustOpenCargo<CR>')
-						-- Hover actions
-						vim.keymap.set("n", "<Leader><space>", rt.hover_actions.hover_actions, { buffer = bufnr })
-						-- Code action groups
-						vim.keymap.set("n", "<Leader><'>", rt.code_action_group.code_action_group, { buffer = bufnr })
 					end,
+					standalone = false,
 				},
 				tools = {
 					hover_actions = {
