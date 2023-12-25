@@ -10,7 +10,6 @@ return {
 						vim.keymap.set("n", "'<", rt.hover_actions.hover_actions, { buffer = bufnr })
 						vim.cmd('abb cargo RustOpenCargo<CR>')
 					end,
-					standalone = false,
 				},
 				tools = {
 					hover_actions = {
