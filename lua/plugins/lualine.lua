@@ -21,14 +21,31 @@ return {
 			}
 		},
 		sections = {
-			lualine_a = { { "filename" } },
-			lualine_b = {},
-			lualine_c = {
+			lualine_a = {
+				{
+					"buffers",
+					hide_filename_extension = true,
+					use_mode_colors = true,
+					symbols = {
+						modified = " ●",
+						alternate_file = ""
+					}
+				}
+			},
+			lualine_b = { { "diagnostics" } },
+			lualine_c = {},
+			lualine_x = {
 				{ "branch", icon = { '', align = 'right' }, { 'diff' } },
 			},
-			lualine_x = { "diagnostics" },
 			lualine_y = {},
-			lualine_z = { { 'filetype', colored = false, icon_only = true } },
+			lualine_z = {
+				{
+					'filetype',
+					colored = false,
+					icon_only = true,
+				}
+			},
+
 			inactive_sections = {},
 			tabline = {},
 			winbar = {},

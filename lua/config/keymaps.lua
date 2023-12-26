@@ -18,8 +18,9 @@ map('n', 'zn', 'zk')
 -- Next and previous coincidences
 map('n', 'l', 'n')
 map('n', 'L', 'N')
--- Formatter
+-- Vim lsp functionalities
 map('n', 'ff', ":lua vim.lsp.buf.format()<CR>")
+map('n', '<leader>rn', ":lua vim.lsp.buf.rename()<CR>")
 -- Quitar el resaltado
 map('n', '?', ':nohlsearch<CR>')
 --Splits
@@ -30,9 +31,9 @@ map('n', 'ws', '<C-w>l')
 map('n', 'wc', '<C-w>c')
 
 -- buffers
-map('n', 'bs', ':bnext<CR>')
-map('n', 'bh', ':bprevious<CR>')
-map('n', 'bw', ':bdelete<CR>')
+map('n', 'gs', ':bnext<CR>')
+map('n', 'gh', ':bprevious<CR>')
+map('n', 'gd', ':bdelete<CR>')
 
 --Dvorak
 --Rigth hand
