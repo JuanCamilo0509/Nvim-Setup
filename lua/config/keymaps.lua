@@ -1,6 +1,7 @@
 local function map(m, k, v)
 	vim.keymap.set(m, k, v, { silent = false })
 end
+map('n', '<leader>s', "z=1<CR><CR>wgea ")
 
 -- Oil
 map('n', '<leader>a', ":Oil<CR>")
@@ -8,7 +9,6 @@ map('n', '<leader>a', ":Oil<CR>")
 -- Tools
 map('n', '<leader>n', ':w<CR>')
 map('n', '<leader>t', ':q<CR>')
-map('i', '<C-h>', '<BS>')
 
 -- G for go to
 map('n', 'gD', '<C-]>') -- Go to the global definition
@@ -21,9 +21,9 @@ map('n', 'L', 'N')
 -- Vim lsp functionalities
 map('n', 'ff', ":lua vim.lsp.buf.format()<CR>")
 map('n', '<leader>rn', ":lua vim.lsp.buf.rename()<CR>")
--- Quitar el resaltado
+-- Remove the highlighting
 map('n', '?', ':nohlsearch<CR>')
---Splits
+--Splits movement
 map('n', 'wn', '<C-w>k')
 map('n', 'wt', '<C-w>j')
 map('n', 'wh', '<C-w>h')
@@ -33,10 +33,10 @@ map('n', 'wc', '<C-w>c')
 -- buffers
 map('n', 'gs', ':bnext<CR>')
 map('n', 'gh', ':bprevious<CR>')
-map('n', 'gd', ':bdelete<CR>')
+map('n', 'gx', ':bdelete<CR>')
 
 --Dvorak
---Rigth hand
+--Right hand
 map('n', 'e', 'i')
 map('n', 'E', 'I')
 map('v', 'e', 'i')

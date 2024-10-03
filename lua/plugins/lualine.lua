@@ -45,7 +45,6 @@ return {
 					icon_only = true,
 				}
 			},
-
 			inactive_sections = {},
 			tabline = {},
 			winbar = {},

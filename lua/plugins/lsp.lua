@@ -99,6 +99,16 @@ return {
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
+		-- configure latex server
+		lspconfig["texlab"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+		-- C language
+		lspconfig["ccls"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
 
 		-- configure lua server (with special settings)
 		lspconfig["lua_ls"].setup({

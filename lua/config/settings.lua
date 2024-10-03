@@ -13,6 +13,9 @@ o.tabstop = 4
 o.shiftwidth = 4
 o.clipboard = 'unnamedplus'
 o.swapfile = false
+vim.opt.conceallevel = 2
+vim.opt.spell = true
+vim.opt.spelllang = { "en_us" }
 g.mapleader = ' '
 vim.cmd([[
 syntax on

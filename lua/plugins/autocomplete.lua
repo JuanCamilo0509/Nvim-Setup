@@ -11,7 +11,6 @@ local M = {
 		"onsails/lspkind.nvim"
 	},
 }
-
 M.config = function()
 	local cmp = require("cmp")
 	local lspkind = require("lspkind")
@@ -34,10 +33,6 @@ M.config = function()
 				require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
 			end,
 		},
-		window = {
-			-- completion = cmp.config.window.bordered(),
-			-- documentation = cmp.config.window.bordered(),
-		},
 		mapping = cmp.mapping.preset.insert({
 			["<C-b>"] = cmp.mapping.scroll_docs(-4),
 			["<C-f>"] = cmp.mapping.scroll_docs(4),
@@ -48,8 +43,7 @@ M.config = function()
 		sources = cmp.config.sources({
 			{ name = "nvim_lsp" },
 			{ name = "nvim_lua" },
-			{ name = "luasnip" }, -- For luasnip users.
-			-- { name = "orgmode" },
+			{ name = "luasnip" },
 		}, {
 			{ name = "buffer" },
 			{ name = "path" },
